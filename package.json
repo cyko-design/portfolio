@@ -1,0 +1,9 @@
+{
+  "name": "charles-yuen-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 8000 --bind 127.0.0.1",
+    "check": "node --check app.js && node --check links.js && node scripts/check.mjs"
+  }
+}

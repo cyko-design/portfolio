@@ -1,0 +1,11 @@
+{
+  "sourceFile": "wLDbTBD9P3fbnicBZg09j5",
+  "assets": [
+    { "path": "assets/mindlens.png", "node": "1:290", "mobileNode": "12:412", "width": 195, "height": 399 },
+    { "path": "assets/considered.png", "node": "4:193", "mobileNode": "12:433", "width": 195, "height": 399 },
+    { "path": "assets/water-nymph.png", "node": "1:296", "mobileNode": "12:454", "width": 194.793, "height": 399 },
+    { "path": "assets/sunset-rider.png", "node": "10:389", "mobileNode": "12:476", "width": 195, "height": 399 },
+    { "path": "assets/figma.svg", "node": "1:218", "width": 26.702, "height": 40 },
+    { "path": "assets/menu.svg", "node": "4:180", "width": 30, "height": 30 }
+  ]
+}
