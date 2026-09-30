@@ -1,7 +1,7 @@
-// Replace null values with the supplied destinations before publishing.
+// Shared destinations for desktop and mobile links.
 window.portfolioLinks = Object.freeze({
-  resume: null,
-  portfolio: null,
+  resume: 'assets/charles-yuen-resume-2026.docx',
+  portfolio: 'https://www.figma.com/deck/b6DfCZkgf1KJnCnDoCo5mG',
   linkedin: 'https://www.linkedin.com/in/charlesyuen/',
   mindlens: 'https://github.com/cyko-design/mindlens/',
   considered: 'https://github.com/cyko-design/considered',
@@ -14,7 +14,12 @@ document.querySelectorAll('[data-link]').forEach(link => {
   const destination = window.portfolioLinks[link.dataset.link];
   if (destination) {
     link.href = destination;
-    link.target = '_blank';
+    if (link.dataset.link === 'resume') {
+      link.setAttribute('download', '');
+      link.removeAttribute('target');
+    } else {
+      link.target = '_blank';
+    }
     link.rel = 'noopener noreferrer';
     link.removeAttribute('aria-disabled');
     link.removeAttribute('tabindex');
