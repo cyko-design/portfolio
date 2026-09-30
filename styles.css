@@ -13,3 +13,21 @@
   .site-header nav .button[data-link="resume"]{padding:14px 16px;margin-top:0;align-self:stretch;justify-content:flex-start}
   .button[data-link="resume"]:hover{text-decoration:underline;text-underline-offset:4px}
 }
+
+/* Sticky navigation: translucent surface, fully opaque text and controls. */
+:root{--header-gutter:64px}
+html{scroll-padding-top:calc(var(--sticky-header-height, 80px) + 16px)}
+.site-header{
+  position:sticky;top:0;z-index:20;
+  margin-top:-12px;margin-right:calc(-1 * var(--header-gutter));margin-left:calc(-1 * var(--header-gutter));margin-bottom:28px;
+  padding:12px var(--header-gutter);
+  background:rgba(251,251,249,.6);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+}
+.skip-link{z-index:30}
+@media(min-width:768px) and (max-width:1199px){:root{--header-gutter:40px}}
+@media(max-width:767px){
+  :root{--header-gutter:20px}
+  .site-header{margin-bottom:16px}
+  .site-header nav{left:var(--header-gutter);right:var(--header-gutter);top:100%}
+}
