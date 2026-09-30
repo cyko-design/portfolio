@@ -27,3 +27,22 @@ document.addEventListener('focusin', event => {
   if (!event.target.closest('.site-header')) setMenu(false);
 });
 mobile.addEventListener('change', () => setMenu(false));
+
+// Close the mobile dropdown when the page moves, keeping the header available.
+window.addEventListener('scroll', () => {
+  if (mobile.matches && menuButton.getAttribute('aria-expanded') === 'true') {
+    setMenu(false, navigation.contains(document.activeElement));
+  }
+}, { passive: true });
+
+// Keep anchor destinations visible beneath the sticky header at any text size.
+const header = document.querySelector('.site-header');
+function updateHeaderOffset() {
+  document.documentElement.style.setProperty('--sticky-header-height', header.offsetHeight + 'px');
+}
+updateHeaderOffset();
+if ('ResizeObserver' in window) {
+  new ResizeObserver(updateHeaderOffset).observe(header);
+} else {
+  window.addEventListener('resize', updateHeaderOffset, { passive: true });
+}
