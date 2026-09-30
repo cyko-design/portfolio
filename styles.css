@@ -31,3 +31,64 @@ html{scroll-padding-top:calc(var(--sticky-header-height, 80px) + 16px)}
   .site-header{margin-bottom:16px}
   .site-header nav{left:var(--header-gutter);right:var(--header-gutter);top:100%}
 }
+
+/* Résumé dialog. Layout and type scale follow the supplied Figma frames. */
+.resume-modal{padding:0;border:0;border-radius:16px;background:#fff;color:var(--ink);width:min(900px,calc(100% - 48px));max-width:none;max-height:calc(100dvh - 76px);margin:38px auto;overflow:auto;overscroll-behavior:contain}
+.resume-modal::backdrop{background:rgba(0,0,0,.5)}
+body.resume-is-open{position:fixed;width:100%;overflow:hidden}
+.resume-sheet{padding:26px 34px;display:flex;flex-direction:column;gap:11px}
+.resume-header{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;align-items:start}
+.resume-toolbar{grid-column:2;grid-row:1;display:flex;align-items:flex-start;gap:12px}
+.resume-mobile-title{display:none}
+.resume-download{padding:10px 14px;font-size:12px;line-height:1}
+.resume-close{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border:0;padding:0;background:transparent;color:var(--ink);border-radius:4px}
+.resume-close span{font-family:Arial,sans-serif;font-size:30px;font-weight:300;line-height:1}
+.resume-close:hover{background:var(--tag)}
+.resume-identity{grid-column:1;grid-row:1;display:flex;align-items:center;gap:22px;min-width:0}
+.resume-photo{width:128px;height:128px;flex:0 0 128px;border-radius:10px;object-fit:cover}
+.resume-identity-copy{min-width:0;display:flex;flex-direction:column;gap:4px;line-height:1.35}
+.resume-identity h2{font-size:29px;font-weight:600;line-height:1.35}
+.resume-role{font-size:15px;font-weight:500;color:var(--muted)}
+.resume-meta{font-size:11px;color:var(--muted)}
+.resume-links{display:flex;flex-wrap:wrap;gap:15px;font-size:11px;font-weight:500;color:var(--green)}
+.resume-section{border-top:1px solid var(--line);padding-top:11px}
+.resume-section h3{font-size:10px;font-weight:600;line-height:1;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px}
+.resume-section p{font-size:9px;line-height:1.34;color:var(--muted)}
+.resume-summary p{font-size:10px;line-height:1.38;max-width:800px}
+.resume-tags{display:flex;flex-wrap:wrap;gap:6px}
+.resume-tags li{font-size:9px;line-height:1;padding:4px 8px;border-radius:10px;background:#f2f5f5;color:var(--muted)}
+.resume-skills{display:grid;grid-template-columns:repeat(2,minmax(0,385px));column-gap:22px;row-gap:0}
+.resume-section h4{font-size:10px;font-weight:600;line-height:1.35;margin:0 0 2px}
+.resume-jobs{display:flex;flex-direction:column;gap:6px}
+.resume-jobs h4{line-height:1.2;margin-bottom:1px}
+.resume-jobs p{line-height:1.25}
+.resume-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,360px));gap:30px}
+.resume-bottom h3{margin-bottom:4px}
+.resume-bottom p{color:var(--ink);line-height:1.32}
+.resume-bottom p+p{margin-top:12px}
+@media(max-width:767px){
+  .resume-modal{position:fixed;inset:0;width:100%;height:100dvh;max-height:100dvh;max-width:100%;margin:0;border-radius:0;background:var(--page)}
+  .resume-sheet{padding:0 22px calc(28px + env(safe-area-inset-bottom,0px));gap:15px}
+  .resume-header{display:contents}
+  .resume-toolbar{position:sticky;top:0;z-index:1;align-items:center;gap:20px;padding:calc(16px + env(safe-area-inset-top,0px)) 0 15px;border-bottom:1px solid var(--line);background:var(--page)}
+  .resume-mobile-title{display:block;flex:1;font-size:17px;font-weight:600;line-height:1.35}
+  .resume-identity{display:flex;gap:14px}
+  .resume-identity h2{font-size:23px}
+  .resume-role{font-size:13px}
+  .resume-meta{font-size:10px}
+  .resume-section{padding-top:15px}
+  .resume-summary p{font-size:11px}
+  .resume-tags{gap:8px 6px}
+  .resume-skills{grid-template-columns:minmax(0,1fr);row-gap:10px}
+  .resume-section h4{font-size:11px}
+  .resume-section p{font-size:10px}
+  .resume-summary p{font-size:11px}
+  .resume-bottom{grid-template-columns:minmax(0,1fr);gap:12px}
+}
+@media(max-width:359px){
+  .resume-toolbar{gap:8px}
+  .resume-download{padding:10px;font-size:11px}
+  .resume-photo{width:100px;height:100px;flex-basis:100px}
+  .resume-identity{gap:12px}
+  .resume-identity h2{font-size:21px}
+}

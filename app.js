@@ -46,3 +46,45 @@ if ('ResizeObserver' in window) {
 } else {
   window.addEventListener('resize', updateHeaderOffset, { passive: true });
 }
+
+// Every résumé entry point opens the same accessible native dialog.
+const resumeDialog = document.querySelector('#resume-modal');
+const resumeClose = resumeDialog.querySelector('.resume-close');
+let resumeOpener = null;
+let resumeScrollY = 0;
+let previousBodyTop = '';
+function openResume(event) {
+  event.preventDefault();
+  if (resumeDialog.open) return;
+  resumeOpener = event.currentTarget;
+  setMenu(false);
+  resumeScrollY = window.scrollY;
+  previousBodyTop = document.body.style.top;
+  document.body.style.top = '-' + resumeScrollY + 'px';
+  document.body.classList.add('resume-is-open');
+  resumeDialog.showModal();
+  resumeDialog.scrollTop = 0;
+  resumeClose.focus({ preventScroll: true });
+}
+document.querySelectorAll('[data-link="resume"]').forEach(link => {
+  link.addEventListener('click', openResume);
+});
+resumeClose.addEventListener('click', () => resumeDialog.close());
+resumeDialog.addEventListener('click', event => {
+  if (event.target !== resumeDialog) return;
+  const bounds = resumeDialog.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom) resumeDialog.close();
+});
+resumeDialog.addEventListener('close', () => {
+  document.body.classList.remove('resume-is-open');
+  document.body.style.top = previousBodyTop;
+  const root = document.documentElement;
+  const previousScrollBehavior = root.style.scrollBehavior;
+  root.style.scrollBehavior = 'auto';
+  window.scrollTo(0, resumeScrollY);
+  // The mobile menu closes when opening the dialog, so restore focus to its toggle.
+  const focusTarget = mobile.matches && navigation.contains(resumeOpener) ? menuButton : resumeOpener;
+  if (focusTarget && focusTarget.isConnected) focusTarget.focus({ preventScroll: true });
+  root.style.scrollBehavior = previousScrollBehavior;
+});

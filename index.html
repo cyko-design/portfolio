@@ -19,7 +19,7 @@
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false"><img src="assets/menu.svg" alt=""></button>
       <nav id="navigation" aria-label="Main navigation">
         <a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#about">About</a>
-        <a class="button" data-link="resume" href="assets/charles-yuen-resume-2026.docx" download>Résumé ↗</a>
+        <a class="button" data-link="resume" href="#resume-modal" aria-haspopup="dialog" aria-controls="resume-modal">Résumé ↗</a>
       </nav>
     </header>
     <main id="main">
@@ -73,14 +73,43 @@
       </section>
       <section class="section experience" id="experience" aria-labelledby="experience-title">
         <h2 class="eyebrow" id="experience-title">Experience</h2>
-        <div class="summary"><h3>20+ years in digital design.</h3><p>Senior-level experience across product, UX, interaction and visual design, working with multidisciplinary teams from concept through delivery.</p><a class="button" data-link="resume" href="assets/charles-yuen-resume-2026.docx" download>View Resume ↗</a></div>
+        <div class="summary"><h3>20+ years in digital design.</h3><p>Senior-level experience across product, UX, interaction and visual design, working with multidisciplinary teams from concept through delivery.</p><a class="button" data-link="resume" href="#resume-modal" aria-haspopup="dialog" aria-controls="resume-modal">View Resume ↗</a></div>
       </section>
       <section class="section about" id="about" aria-labelledby="about-title">
         <h2 class="eyebrow" id="about-title">About</h2>
         <div class="summary"><h3>A designer, creator<br>and lifelong learner.</h3><p>I’ve worked in digital design since the early web era, across agencies and product teams, designing experiences that are useful, meaningful and human. I’m increasingly exploring the intersection of design, AI and product building.</p></div>
       </section>
     </main>
-    <footer class="site-footer"><div class="identity"><p>Charles Yuen</p><p>Senior Product / UX Designer</p></div><div class="footer-links"><a class="linkedin" data-link="linkedin" href="https://www.linkedin.com/in/charlesyuen/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a data-link="resume" href="assets/charles-yuen-resume-2026.docx" download>Résumé ↗</a><small>© 2026 Charles Yuen</small></div></footer>
+    <footer class="site-footer"><div class="identity"><p>Charles Yuen</p><p>Senior Product / UX Designer</p></div><div class="footer-links"><a class="linkedin" data-link="linkedin" href="https://www.linkedin.com/in/charlesyuen/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a data-link="resume" href="#resume-modal" aria-haspopup="dialog" aria-controls="resume-modal">Résumé ↗</a><small>© 2026 Charles Yuen</small></div></footer>
   </div>
+
+  <dialog id="resume-modal" class="resume-modal" aria-labelledby="resume-name" aria-label="Charles Yuen résumé">
+    <div class="resume-sheet">
+      <header class="resume-header">
+        <div class="resume-toolbar">
+          <p class="resume-mobile-title">Résumé</p>
+          <a class="button resume-download" href="assets/charles-yuen-resume-2026.docx" download="charles-yuen-resume-2026.docx">Download Résumé ↓</a>
+          <button class="resume-close" type="button" aria-label="Close résumé" autofocus><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="resume-identity">
+          <img class="resume-photo" src="assets/profile-photo.png" alt="Charles Yuen" width="128" height="128">
+          <div class="resume-identity-copy">
+            <h2 id="resume-name">Charles Yuen</h2>
+            <p class="resume-role">Lead UX Designer</p>
+            <p class="resume-meta">Malaysian / China Green Card holder | Married</p>
+            <div class="resume-links"><a data-link="portfolio" href="https://www.figma.com/deck/b6DfCZkgf1KJnCnDoCo5mG" target="_blank" rel="noopener noreferrer">Portfolio ↗</a><a data-link="linkedin" href="https://www.linkedin.com/in/charlesyuen/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+          </div>
+        </div>
+      </header>
+      <section class="resume-section resume-summary"><h3>Professional summary</h3><p>Lead UX Designer with 20+ years of experience across Fintech, Enterprise, CRM, E-commerce, Automotive, and Digital Marketing products. Experienced in UX Strategy, User Research, Interaction Design, Stakeholder Management, and Digital Delivery, with a multidisciplinary background spanning UX, Creative Technology, Motion Graphics, 3D Visualisation, and Product Development.</p></section>
+      <section class="resume-section"><h3>Core expertise</h3><ul class="resume-tags"><li>UX Strategy</li><li>User Research</li><li>Information Architecture</li><li>Interaction Design</li><li>Design Systems</li><li>Usability Testing</li><li>Stakeholder Management</li><li>Cross-functional Collaboration</li><li>Team Leadership</li><li>Agile Delivery</li></ul></section>
+      <section class="resume-section"><h3>Skills &amp; expertise</h3><div class="resume-skills"><div><h4>UX &amp; Product</h4><p>UX Strategy, User Research, Requirements Gathering, Information Architecture, User Flows, Interaction Design, Wireframing, Prototyping, Usability Testing, Design Systems, Accessibility</p></div><div><h4>Leadership &amp; Delivery</h4><p>Stakeholder Management, Cross-functional Collaboration, Workshop Facilitation, Agile Delivery, Project Planning, Team Mentoring, Quality Assurance, Design Reviews</p></div><div><h4>Design &amp; Prototyping Tools</h4><p>Figma, Sketch, ProtoPie, Framer, Axure, OmniGraffle, Overflow</p></div><div><h4>Creative &amp; Visual Design</h4><p>Adobe Photoshop, Illustrator, After Effects, Premiere Pro, Spline 3D</p></div><div><h4>Technical Knowledge</h4><p>Front-end Development Principles, HTML/CSS Fundamentals, Responsive Design, Design-to-Development Collaboration, Technical Feasibility Assessment</p></div><div><h4>AI-Assisted Design &amp; Research</h4><p>ChatGPT, DeepSeek, Perplexity, Midjourney, Stable Diffusion, Sora, Nano Banana, Hailuo, Grok</p></div></div></section>
+      <section class="resume-section"><h3>Professional experience</h3><div class="resume-jobs"><div><h4>UX Consultant</h4><p>Koha Digital | Malaysia | 2025 - Present</p></div><div><h4>Lead UI/UX Consultant / Designer</h4><p>BreadComb | Singapore | 2022 - Present</p></div><div><h4>Lead UI/UX Designer</h4><p>Cognixus Technologies | Malaysia | Oct 2022 - Sep 2025</p></div><div><h4>Freelance UI/UX Designer, Mini Program &amp; Ecommerce Consultant</h4><p>Various Clients | Jul 2019 - Oct 2022</p></div><div><h4>User Experience Lead</h4><p>Strichpunkt Design | Germany (Remote) | Feb 2018 - Aug 2019</p></div></div></section>
+      <div class="resume-section resume-bottom">
+        <section><h3>Education</h3><p>Bachelor of Arts in 3D Animation and Video<br>University of Art College</p><p>Computer Science<br>ICL Training Centre</p></section>
+        <section><h3>Additional information</h3><p>Languages: English (Fluent), Mandarin (Conversational)<br>Residency: Malaysian Citizen, China Permanent Resident</p></section>
+      </div>
+    </div>
+  </dialog>
 </body>
 </html>

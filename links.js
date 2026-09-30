@@ -1,6 +1,6 @@
 // Shared destinations for desktop and mobile links.
 window.portfolioLinks = Object.freeze({
-  resume: 'assets/charles-yuen-resume-2026.docx',
+  resume: '#resume-modal',
   portfolio: 'https://www.figma.com/deck/b6DfCZkgf1KJnCnDoCo5mG',
   linkedin: 'https://www.linkedin.com/in/charlesyuen/',
   mindlens: 'https://github.com/cyko-design/mindlens/',
@@ -15,7 +15,9 @@ document.querySelectorAll('[data-link]').forEach(link => {
   if (destination) {
     link.href = destination;
     if (link.dataset.link === 'resume') {
-      link.setAttribute('download', '');
+      link.removeAttribute('download');
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.setAttribute('aria-controls', 'resume-modal');
       link.removeAttribute('target');
     } else {
       link.target = '_blank';
