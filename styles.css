@@ -4,3 +4,12 @@
 @media(min-width:768px) and (max-width:1199px){.page{padding:28px 40px}.projects{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}.experience h3{width:35%;flex-shrink:1}.experience .summary p{width:40%}.summary{gap:28px}.about h3{width:35%;flex-shrink:1}.site-header nav{gap:18px}.wordmark{font-size:1.625rem}.portfolio-banner{flex-wrap:wrap}.skill-groups{gap:20px}}
 @media(max-width:767px){:root{--section-space:28px}.page{padding:20px 20px 24px}.site-header{margin-bottom:28px}.wordmark{font-size:1.625rem}.menu-toggle{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-4.5px -7px;padding:0;background:none;border:0;border-radius:6px}.site-header nav{display:none;position:absolute;top:calc(100% + 14px);left:0;right:0;z-index:5;flex-direction:column;align-items:stretch;gap:0;border:1px solid var(--line);border-radius:12px;padding:8px;background:var(--page);box-shadow:0 12px 24px #0e131712}.site-header nav.is-open{display:flex}.site-header nav a{padding:14px 16px}.site-header nav .button{margin-top:4px;align-self:flex-start}.intro{padding-bottom:28px}h1{font-size:2.25rem;max-width:330px}.intro-copy{max-width:330px;font-size:1rem}.work-caption{display:none}.projects{grid-template-columns:minmax(0,1fr);gap:18px}.portfolio-banner{flex-direction:column;align-items:flex-start;gap:16px}.figma-icon{display:none}.banner-copy{max-width:280px}.banner-copy h3{font-size:1.125rem}.skill-groups{display:flex;flex-direction:column;gap:20px}.skill-group .tags{flex-direction:column;width:auto}.summary,.experience .summary{flex-direction:column;gap:10px}.summary h3,.experience h3,.about h3{font-size:1.75rem;width:330px;max-width:100%;flex-shrink:1}.summary p,.experience .summary p,.about p{width:330px;max-width:100%}.site-footer{padding-top:28px;flex-direction:column;gap:12px}.footer-links{column-gap:20px;row-gap:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Mobile résumé links share the footer LinkedIn colour; desktop buttons stay filled. */
+@media(max-width:767px){
+  a[data-link="resume"]{color:var(--green)}
+  .button[data-link="resume"],.button[data-link="resume"]:hover{background:transparent;color:var(--green);border:0;border-radius:0;box-shadow:none}
+  .button[data-link="resume"]{padding:12px 0;min-height:44px}
+  .site-header nav .button[data-link="resume"]{padding:14px 16px;margin-top:0;align-self:stretch;justify-content:flex-start}
+  .button[data-link="resume"]:hover{text-decoration:underline;text-underline-offset:4px}
+}
