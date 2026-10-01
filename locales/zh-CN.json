@@ -91,5 +91,13 @@
   "job.strichpunkt": "Strichpunkt Design | 德国（远程）| 2018年2月 - 2019年8月",
   "resume.edu": "3D Animation and Video 文学学士\nUniversity of Art College",
   "resume.cs": "Computer Science\nICL Training Centre",
-  "resume.info": "语言：英语（流利）、普通话（日常交流）\n身份：马来西亚公民、中国永久居民"
+  "resume.info": "语言：英语（流利）、普通话（日常交流）\n身份：马来西亚公民、中国永久居民",
+  "resume.mobileTitle": "简历",
+  "core.uxStrategy": "UX 策略",
+  "core.userResearch": "用户研究",
+  "core.usability": "可用性测试",
+  "core.stakeholder": "利益相关者管理",
+  "core.crossFunctional": "跨职能协作",
+  "core.teamLeadership": "团队领导",
+  "core.agile": "Agile 交付"
 }
