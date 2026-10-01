@@ -92,3 +92,10 @@ body.resume-is-open{position:fixed;width:100%;overflow:hidden}
   .resume-identity{gap:12px}
   .resume-identity h2{font-size:21px}
 }
+
+.language-switch{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:.75rem;white-space:nowrap}
+.language-switch button{border:0;background:transparent;padding:6px 2px;color:var(--muted);font-size:.75rem;font-weight:500}
+.language-switch button[aria-pressed="true"]{color:var(--ink);font-weight:600}
+.language-switch button:hover{color:var(--green)}
+@media(max-width:767px){.language-switch{padding:8px 16px}.language-switch button{padding:6px 0}}
+html[lang="zh-CN"] body{font-family:Inter,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif}
