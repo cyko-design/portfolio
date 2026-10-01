@@ -93,9 +93,8 @@ body.resume-is-open{position:fixed;width:100%;overflow:hidden}
   .resume-identity h2{font-size:21px}
 }
 
-.language-switch{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:.75rem;white-space:nowrap}
-.language-switch button{border:0;background:transparent;padding:6px 2px;color:var(--muted);font-size:.75rem;font-weight:500}
-.language-switch button[aria-pressed="true"]{color:var(--ink);font-weight:600}
-.language-switch button:hover{color:var(--green)}
-@media(max-width:767px){.language-switch{padding:8px 16px}.language-switch button{padding:6px 0}}
+.nav-divider{width:1px;height:18px;background:var(--line);flex:0 0 1px}
+.language-switch{display:inline-flex;align-items:center;border:0;background:transparent;padding:6px 0;color:var(--green);font-size:.875rem;font-weight:600;line-height:1.35;white-space:nowrap}
+.language-switch:hover{color:#16845f;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:767px){.nav-divider{width:auto;height:1px;margin:4px 16px;background:var(--line)}.language-switch{padding:14px 16px;text-align:left;align-self:stretch}}
 html[lang="zh-CN"] body{font-family:Inter,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif}
