@@ -8,7 +8,7 @@
   <meta name="description" content="Charles Yuen, Senior Product / UX Designer. 20+ years crafting digital experiences across UX, product strategy, design systems and AI-assisted creation.">
   <title>Charles Yuen | Senior Product / UX Designer</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="links.js" defer></script>
+  <script src="links.js" defer></script>\n  <script src="i18n.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -18,19 +18,19 @@
       <a class="wordmark" href="#top" id="top">Charles Yuen</a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false"><img src="assets/menu.svg" alt=""></button>
       <nav id="navigation" aria-label="Main navigation">
-        <a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#about">About</a>
-        <a class="button" data-link="resume" href="#resume-modal" aria-haspopup="dialog" aria-controls="resume-modal">Résumé ↗</a>
+        <a href="#work" data-i18n="nav.work">Work</a><a href="#skills" data-i18n="nav.skills">Skills</a><a href="#experience" data-i18n="nav.experience">Experience</a><a href="#about" data-i18n="nav.about">About</a>\n        <div class="language-switch" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="zh-CN" aria-pressed="false">中文</button></div>
+        <a class="button" data-link="resume" data-i18n="nav.resume" href="#resume-modal" aria-haspopup="dialog" aria-controls="resume-modal">Résumé ↗</a>
       </nav>
     </header>
     <main id="main">
       <section class="intro" aria-labelledby="intro-title">
-        <p class="eyebrow muted">Senior Product / UX Designer</p>
-        <h1 id="intro-title">Designing digital products<br>for a more human future.</h1>
-        <p class="intro-copy">20+ years crafting digital experiences, from UX and interaction design to product strategy, design systems and AI-assisted creation.</p>
-        <a class="button" href="#work">View work ↓</a>
+        <p class="eyebrow muted" data-i18n="intro.role">Senior Product / UX Designer</p>
+        <h1 id="intro-title" data-i18n="intro.title" data-i18n-lines>Designing digital products<br>for a more human future.</h1>
+        <p class="intro-copy" data-i18n="intro.copy">20+ years crafting digital experiences, from UX and interaction design to product strategy, design systems and AI-assisted creation.</p>
+        <a class="button" href="#work" data-i18n="intro.cta">View work ↓</a>
       </section>
       <section id="work" class="section work" aria-labelledby="work-title">
-        <div class="section-heading"><h2 class="eyebrow" id="work-title">Selected work</h2><span class="work-caption">View all projects below ↓</span></div>
+        <div class="section-heading"><h2 class="eyebrow" id="work-title" data-i18n="work.title">Selected work</h2><span class="work-caption" data-i18n="work.caption">View all projects below ↓</span></div>
         <div class="projects">
           <article class="project mindlens">
             <div class="thumbnail"><div class="thumbnail-copy"><p class="thumbnail-title">Different<br>Minds<br>Brighter<br>Lives</p><p>A more<br>understanding<br>tomorrow</p></div><img class="project-image" src="assets/mindlens.png" alt="MindLens mobile assessment interface" width="195" height="399"></div>
@@ -64,7 +64,7 @@
         </aside>
       </section>
       <section class="section skills" id="skills" aria-labelledby="skills-title">
-        <h2 class="eyebrow" id="skills-title">Key skills</h2>
+        <h2 class="eyebrow" id="skills-title" data-i18n="skills.title">Key skills</h2>
         <div class="skill-groups">
           <div class="skill-group"><h3>Product &amp; UX</h3><ul class="tags"><li>Product Design</li><li>UX Design</li><li>UI Design</li><li>Interaction Design</li><li>Information Architecture</li><li>Prototyping</li><li>Design Systems</li></ul></div>
           <div class="skill-group"><h3>Leadership &amp; Delivery</h3><ul class="tags"><li>Project Management</li><li>Production Management</li><li>Stakeholder Collaboration</li><li>UX Leadership</li><li>Design Review</li><li>Team Mentoring</li></ul></div>
@@ -72,11 +72,11 @@
         </div>
       </section>
       <section class="section experience" id="experience" aria-labelledby="experience-title">
-        <h2 class="eyebrow" id="experience-title">Experience</h2>
+        <h2 class="eyebrow" id="experience-title" data-i18n="experience.title">Experience</h2>
         <div class="summary"><h3>20+ years in digital design.</h3><p>Senior-level experience across product, UX, interaction and visual design, working with multidisciplinary teams from concept through delivery.</p><a class="button" data-link="resume" href="#resume-modal" aria-haspopup="dialog" aria-controls="resume-modal">View Resume ↗</a></div>
       </section>
       <section class="section about" id="about" aria-labelledby="about-title">
-        <h2 class="eyebrow" id="about-title">About</h2>
+        <h2 class="eyebrow" id="about-title" data-i18n="about.title">About</h2>
         <div class="summary"><h3>A designer, creator<br>and lifelong learner.</h3><p>I’ve worked in digital design since the early web era, across agencies and product teams, designing experiences that are useful, meaningful and human. I’m increasingly exploring the intersection of design, AI and product building.</p></div>
       </section>
     </main>
@@ -88,7 +88,7 @@
       <header class="resume-header">
         <div class="resume-toolbar">
           <p class="resume-mobile-title">Résumé</p>
-          <a class="button resume-download" href="assets/charles-yuen-resume-2026.docx" download="charles-yuen-resume-2026.docx">Download Résumé ↓</a>
+          <a class="button resume-download" data-i18n="resume.download" href="assets/charles-yuen-resume-2026.docx" download="charles-yuen-resume-2026.docx">Download Résumé ↓</a>
           <button class="resume-close" type="button" aria-label="Close résumé" autofocus><span aria-hidden="true">×</span></button>
         </div>
         <div class="resume-identity">
