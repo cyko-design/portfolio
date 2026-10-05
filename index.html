@@ -78,6 +78,14 @@
         <h2 class="eyebrow" id="experience-title" data-i18n="experience.title">Experience</h2>
         <div class="summary"><h3 data-i18n="experience.heading">20+ years in digital design.</h3><p data-i18n="experience.copy">Senior-level experience across product, UX, interaction and visual design, working with multidisciplinary teams from concept through delivery.</p><a class="button" data-i18n="experience.cta" data-link="resume" href="#resume-modal" aria-haspopup="dialog" aria-controls="resume-modal">View Resume ↗</a></div>
       </section>
+      <section class="section ai-critique" id="ai-critique" aria-labelledby="ai-critique-title">
+        <h2 class="eyebrow" id="ai-critique-title" data-i18n="critique.title">AI Critique</h2>
+        <div class="critique-summary">
+          <blockquote data-i18n="critique.quote">He turns design intent into clear systems, then iterates without losing what already works.</blockquote>
+          <p class="critique-attribution" data-i18n="critique.attribution">ChatGPT, based on our work across product design, implementation and generative AI.</p>
+          <a class="critique-link" href="#critique-modal" aria-haspopup="dialog" aria-controls="critique-modal" data-i18n="critique.cta">Read full critique ↗</a>
+        </div>
+      </section>
       <section class="section about" id="about" aria-labelledby="about-title">
         <h2 class="eyebrow" id="about-title" data-i18n="about.title">About</h2>
         <div class="summary"><h3 data-i18n="about.heading" data-i18n-lines>A designer, creator<br>and lifelong learner.</h3><p data-i18n="about.copy">I’ve worked in digital design since the early web era, across agencies and product teams, designing experiences that are useful, meaningful and human. I’m increasingly exploring the intersection of design, AI and product building.</p></div>
@@ -85,6 +93,21 @@
     </main>
     <footer class="site-footer"><div class="identity"><p>Charles Yuen</p><p data-i18n="intro.role">Senior Product / UX Designer</p></div><div class="footer-links"><a class="linkedin" data-link="linkedin" href="https://www.linkedin.com/in/charlesyuen/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a data-link="resume" href="#resume-modal" aria-haspopup="dialog" aria-controls="resume-modal" data-i18n="nav.resume">Résumé ↗</a><small>© 2026 Charles Yuen</small></div></footer>
   </div>
+
+  <dialog id="critique-modal" class="resume-modal critique-modal" aria-labelledby="critique-modal-title">
+    <div class="resume-sheet critique-sheet">
+      <header class="critique-header">
+        <div><p class="eyebrow muted" data-i18n="critique.title">AI Critique</p><h2 id="critique-modal-title" data-i18n="critique.modalTitle">How I work, according to AI</h2></div>
+        <button class="resume-close critique-close" type="button" aria-label="Close AI critique"><span aria-hidden="true">×</span></button>
+      </header>
+      <section class="resume-section"><h3 data-i18n="critique.patternTitle">The recurring pattern</h3><p data-i18n="critique.pattern">Across product design, implementation and generative AI work, the same method keeps appearing: define the source of truth, specify constraints, compare the result against intent, turn failures into explicit rules, and iterate without disturbing approved work.</p></section>
+      <section class="resume-section"><h3 data-i18n="critique.systemsTitle">Systems over screens</h3><p data-i18n="critique.systems">The work is defined as connected behaviour, states and rules rather than isolated screens. Product logic, lifecycle and edge cases are treated as part of the design.</p></section>
+      <section class="resume-section"><h3 data-i18n="critique.intentTitle">Intent before implementation</h3><p data-i18n="critique.intent">Visual truth and functional truth are separated. Figma defines presentation; requirements define behaviour, content and scope. Implementation is reviewed against both.</p></section>
+      <section class="resume-section"><h3 data-i18n="critique.iterationTitle">Controlled iteration</h3><p data-i18n="critique.iteration">Approved work is protected. Bugs and generation failures become reusable rules, allowing the next iteration to improve without reopening decisions that already work.</p></section>
+      <section class="resume-section"><h3 data-i18n="critique.aiTitle">Human-directed AI</h3><p data-i18n="critique.ai">AI is used as an implementation and creative collaborator, not the product owner. Intent, judgement and final approval remain human-directed.</p></section>
+      <section class="resume-section critique-bottom"><h3 data-i18n="critique.bottomTitle">Bottom line</h3><p data-i18n="critique.bottom">The strongest pattern is the ability to translate intent into constraints, test the result against that intent, and progressively make the system more reliable.</p></section>
+    </div>
+  </dialog>
 
   <dialog id="resume-modal" class="resume-modal" aria-labelledby="resume-name" aria-label="Charles Yuen résumé">
     <div class="resume-sheet">
