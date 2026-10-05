@@ -88,3 +88,35 @@ resumeDialog.addEventListener('close', () => {
   if (focusTarget && focusTarget.isConnected) focusTarget.focus({ preventScroll: true });
   root.style.scrollBehavior = previousScrollBehavior;
 });
+
+
+// AI critique uses the same native-dialog behaviour as the résumé.
+const critiqueDialog = document.querySelector('#critique-modal');
+const critiqueClose = critiqueDialog.querySelector('.critique-close');
+const critiqueTrigger = document.querySelector('[aria-controls="critique-modal"]');
+let critiqueScrollY = 0;
+critiqueTrigger.addEventListener('click', event => {
+  event.preventDefault();
+  critiqueScrollY = window.scrollY;
+  document.body.style.top = '-' + critiqueScrollY + 'px';
+  document.body.classList.add('resume-is-open');
+  critiqueDialog.showModal();
+  critiqueDialog.scrollTop = 0;
+  critiqueClose.focus({ preventScroll: true });
+});
+critiqueClose.addEventListener('click', () => critiqueDialog.close());
+critiqueDialog.addEventListener('click', event => {
+  if (event.target !== critiqueDialog) return;
+  const b = critiqueDialog.getBoundingClientRect();
+  if (event.clientX < b.left || event.clientX > b.right || event.clientY < b.top || event.clientY > b.bottom) critiqueDialog.close();
+});
+critiqueDialog.addEventListener('close', () => {
+  document.body.classList.remove('resume-is-open');
+  document.body.style.top = '';
+  const root = document.documentElement;
+  const old = root.style.scrollBehavior;
+  root.style.scrollBehavior = 'auto';
+  window.scrollTo(0, critiqueScrollY);
+  critiqueTrigger.focus({ preventScroll: true });
+  root.style.scrollBehavior = old;
+});
