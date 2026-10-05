@@ -93,7 +93,7 @@ resumeDialog.addEventListener('close', () => {
 // AI critique uses the same native-dialog behaviour as the résumé.
 const critiqueDialog = document.querySelector('#critique-modal');
 const critiqueClose = critiqueDialog.querySelector('.critique-close');
-const critiqueTrigger = document.querySelector('[aria-controls="critique-modal"]');
+const critiqueTrigger = document.querySelector('.critique-link[aria-controls="critique-modal"]');
 let critiqueScrollY = 0;
 critiqueTrigger.addEventListener('click', event => {
   event.preventDefault();
