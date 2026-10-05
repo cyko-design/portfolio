@@ -6,6 +6,14 @@
     { "path": "assets/water-nymph.png", "node": "1:296", "mobileNode": "12:454", "width": 194.793, "height": 399 },
     { "path": "assets/sunset-rider.png", "node": "10:389", "mobileNode": "12:476", "width": 195, "height": 399 },
     { "path": "assets/figma.svg", "node": "1:218", "width": 26.702, "height": 40 },
-    { "path": "assets/menu.svg", "node": "4:180", "width": 30, "height": 30 }
+    { "path": "assets/menu.svg", "node": "4:180", "width": 30, "height": 30 },
+    { "path": "assets/icons/link-white.svg", "node": "64:128", "width": 9, "height": 9 },
+    { "path": "assets/icons/download-white.svg", "node": "64:130", "width": 9, "height": 9 },
+    { "path": "assets/icons/link-black.svg", "node": "I64:210;64:146", "width": 9, "height": 9 },
+    { "path": "assets/icons/download-black.svg", "width": 9, "height": 9 },
+    { "path": "assets/icons/link-green.svg", "node": "I64:189;64:151", "width": 9, "height": 9 },
+    { "path": "assets/icons/link-green-small.svg", "node": "I64:422;64:419", "width": 8, "height": 8 },
+    { "path": "assets/icons/link-black-small.svg", "node": "I64:460;64:406;64:416", "width": 8, "height": 8 },
+    { "path": "assets/icons/close.svg", "node": "26:121", "width": 30, "height": 30 }
   ]
 }

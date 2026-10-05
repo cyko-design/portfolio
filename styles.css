@@ -42,7 +42,6 @@ body.resume-is-open{position:fixed;width:100%;overflow:hidden}
 .resume-mobile-title{display:none}
 .resume-download{padding:10px 14px;font-size:12px;line-height:1}
 .resume-close{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border:0;padding:0;background:transparent;color:var(--ink);border-radius:4px}
-.resume-close span{font-family:Arial,sans-serif;font-size:30px;font-weight:300;line-height:1}
 .resume-close:hover{background:var(--tag)}
 .resume-identity{grid-column:1;grid-row:1;display:flex;align-items:center;gap:22px;min-width:0}
 .resume-photo{width:128px;height:128px;flex:0 0 128px;border-radius:10px;object-fit:cover}
@@ -108,7 +107,6 @@ html[lang="zh-CN"] body{font-family:Inter,"PingFang SC","Microsoft YaHei","Noto 
 .critique-modal-header{display:flex;align-items:flex-start;gap:20px}
 .critique-modal-header h2{flex:1;font-size:29px;font-weight:600;line-height:1.35}
 .critique-close{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border:0;padding:0;background:transparent;color:var(--ink);border-radius:4px}
-.critique-close span{font-family:Arial,sans-serif;font-size:30px;font-weight:300;line-height:1}
 .critique-close:hover{background:var(--tag)}
 .critique-block{border-top:1px solid var(--line);padding-top:11px}
 .critique-block h3{font-size:.75rem;font-weight:600;line-height:1;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 7px}
@@ -133,8 +131,15 @@ html[lang="zh-CN"] body{font-family:Inter,"PingFang SC","Microsoft YaHei","Noto 
  .critique-bottom-info{grid-template-columns:minmax(0,1fr);gap:12px}
 }
 
-/* iOS Safari normalisation: prevent emoji rendering and native button chrome. */
-a{font-variant-emoji:text}
+/* Preserve native-button reset and keyboard focus for modal close controls. */
 .resume-close,.critique-close{-webkit-appearance:none;appearance:none;border:0;box-shadow:none;background:transparent}
 .resume-close:focus,.critique-close:focus{outline:none}
 .resume-close:focus-visible,.critique-close:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+/* Separate decorative Figma assets from labels so localisation preserves icons. */
+.icon-link{display:inline-flex;align-items:center;gap:5px}
+.action-icon{display:block;flex-shrink:0}
+.project-links .icon-link{padding-inline:2px;line-height:1}
+.critique-link.icon-link{padding-inline:2px}
+.resume-close img,.critique-close img{flex-shrink:0}
+@media(max-width:767px){.icon-desktop-only{display:none}}
