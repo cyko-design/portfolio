@@ -132,3 +132,8 @@ html[lang="zh-CN"] body{font-family:Inter,"PingFang SC","Microsoft YaHei","Noto 
  .critique-points{grid-template-columns:minmax(0,1fr);row-gap:14px}
  .critique-bottom-info{grid-template-columns:minmax(0,1fr);gap:12px}
 }
+
+/* iOS Safari normalisation: prevent emoji rendering and native button chrome. */
+a{font-variant-emoji:text}
+.resume-close,.critique-close{-webkit-appearance:none;appearance:none;border:0;box-shadow:none;background:transparent}
+.resume-close:focus-visible,.critique-close:focus-visible{outline:2px solid var(--green);outline-offset:2px}
