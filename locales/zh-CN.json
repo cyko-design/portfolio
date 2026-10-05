@@ -99,5 +99,22 @@
   "core.stakeholder": "利益相关者管理",
   "core.crossFunctional": "跨职能协作",
   "core.teamLeadership": "团队领导",
-  "core.agile": "Agile 交付"
+  "core.agile": "Agile 交付",
+  "critique.title": "AI 评价",
+  "critique.quote": "他将设计意图转化为清晰的系统，并在不破坏已有成果的前提下持续迭代。",
+  "critique.attribution": "ChatGPT，基于我们在产品设计、实现及生成式 AI 项目中的长期协作。",
+  "critique.cta": "查看完整评价 ↗",
+  "critique.modalTitle": "AI 眼中的我的工作方式",
+  "critique.patternTitle": "反复出现的工作模式",
+  "critique.pattern": "在产品设计、实现及生成式 AI 项目中，同一种方法不断出现：明确唯一依据、定义约束、对照设计意图检查结果、将失败转化为明确规则，并在不影响已确认成果的前提下持续迭代。",
+  "critique.systemsTitle": "系统，而不只是界面",
+  "critique.systems": "工作重点是相互关联的行为、状态与规则，而不是孤立的界面。产品逻辑、生命周期和边界情况本身就是设计的一部分。",
+  "critique.intentTitle": "先明确意图，再实现",
+  "critique.intent": "视觉依据与功能依据被清楚区分。Figma 定义视觉呈现，需求定义行为、内容与范围，实现结果同时对照两者进行检查。",
+  "critique.iterationTitle": "受控迭代",
+  "critique.iteration": "已确认的成果会被保留。Bug 与生成失败会转化为可复用的规则，让下一轮迭代继续改善，而不重新打开已经解决的问题。",
+  "critique.aiTitle": "由人主导的 AI 协作",
+  "critique.ai": "AI 被视为实现与创意协作伙伴，而不是产品负责人。意图、判断与最终决定始终由人主导。",
+  "critique.bottomTitle": "总结",
+  "critique.bottom": "最突出的模式，是把意图转化为约束，对照意图检验结果，并逐步让整个系统变得更可靠。"
 }
