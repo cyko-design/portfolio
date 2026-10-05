@@ -99,5 +99,22 @@
   "core.stakeholder": "Stakeholder Management",
   "core.crossFunctional": "Cross-functional Collaboration",
   "core.teamLeadership": "Team Leadership",
-  "core.agile": "Agile Delivery"
+  "core.agile": "Agile Delivery",
+  "critique.title": "AI Critique",
+  "critique.quote": "He turns design intent into clear systems, then iterates without losing what already works.",
+  "critique.attribution": "ChatGPT, based on our work across product design, implementation and generative AI.",
+  "critique.cta": "Read full critique ↗",
+  "critique.modalTitle": "How I work, according to AI",
+  "critique.patternTitle": "The recurring pattern",
+  "critique.pattern": "Across product design, implementation and generative AI work, the same method keeps appearing: define the source of truth, specify constraints, compare the result against intent, turn failures into explicit rules, and iterate without disturbing approved work.",
+  "critique.systemsTitle": "Systems over screens",
+  "critique.systems": "The work is defined as connected behaviour, states and rules rather than isolated screens. Product logic, lifecycle and edge cases are treated as part of the design.",
+  "critique.intentTitle": "Intent before implementation",
+  "critique.intent": "Visual truth and functional truth are separated. Figma defines presentation; requirements define behaviour, content and scope. Implementation is reviewed against both.",
+  "critique.iterationTitle": "Controlled iteration",
+  "critique.iteration": "Approved work is protected. Bugs and generation failures become reusable rules, allowing the next iteration to improve without reopening decisions that already work.",
+  "critique.aiTitle": "Human-directed AI",
+  "critique.ai": "AI is used as an implementation and creative collaborator, not the product owner. Intent, judgement and final approval remain human-directed.",
+  "critique.bottomTitle": "Bottom line",
+  "critique.bottom": "The strongest pattern is the ability to translate intent into constraints, test the result against that intent, and progressively make the system more reliable."
 }
