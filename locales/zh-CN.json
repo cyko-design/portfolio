@@ -133,5 +133,20 @@
   "critique.strengthTitle": "核心优势",
   "critique.strength": "设计规范与受控迭代。",
   "critique.fullCritiqueTitle": "AI 评价",
-  "critique.fullCritique": "具备强烈的系统思维，明确定义状态与边界情况，对实现偏差高度敏感，并始终倾向于保留已确认成果，而不是反复重新设计。"
+  "critique.fullCritique": "具备强烈的系统思维，明确定义状态与边界情况，对实现偏差高度敏感，并始终倾向于保留已确认成果，而不是反复重新设计。",
+  "critique.tag1": "系统思维",
+  "critique.tag2": "明确意图",
+  "critique.tag3": "受控迭代",
+  "critique.tag4": "设计系统",
+  "critique.tag5": "边界情况定义",
+  "critique.tag6": "实现质量检查",
+  "critique.tag7": "范围控制",
+  "critique.tag8": "保留已确认成果",
+  "critique.tag9": "AI 协作",
+  "critique.tag10": "跨职能思维",
+  "critique.connect1": "MindLens：行为系统与信任",
+  "critique.connect2": "Considered：发现、内容与社区机制",
+  "critique.connect3": "Portfolio：沟通与优先级",
+  "critique.connect4": "AI 创意工作：方向、一致性与受控生成",
+  "critique.connect5": "不同的问题，一致的方法。"
 }
