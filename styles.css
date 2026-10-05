@@ -97,5 +97,38 @@ html[lang="zh-CN"] body{font-family:Inter,"PingFang SC","Microsoft YaHei","Noto 
 
 
 
-/* AI critique section + modal, matched to Figma node 44:101. */
-.ai-critique .critique-summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr) auto;gap:28px;align-items:end;margin-top:18px}.ai-critique blockquote{margin:0;max-width:720px;font-size:1.75rem;font-weight:500;line-height:1.2}.critique-attribution{color:var(--muted);font-size:1rem;line-height:1.45}.critique-link{align-self:end;color:var(--green);font-size:.875rem;font-weight:500;white-space:nowrap}.critique-modal{padding:0;border:0;border-radius:16px;background:var(--page);color:var(--ink);width:390px;max-width:calc(100% - 40px);max-height:calc(100dvh - 40px);margin:auto;overflow:auto;overscroll-behavior:contain}.critique-modal::backdrop{background:rgba(0,0,0,.5)}.critique-sheet{display:flex;flex-direction:column;gap:15px;padding:16px 22px 28px}.critique-modal-header{display:flex;align-items:center;gap:20px}.critique-modal-header h2{flex:1;font-size:17px;font-weight:600;line-height:1.35}.critique-close{display:grid;place-items:center;width:30px;height:30px;flex:0 0 30px;border:0;padding:0;background:transparent;color:var(--ink);border-radius:4px}.critique-close span{font-family:Arial,sans-serif;font-size:30px;font-weight:300;line-height:1}.critique-close:hover{background:var(--tag)}.critique-block{border-top:1px solid var(--line);padding-top:15px}.critique-block h3{font-size:10px;font-weight:600;line-height:1;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 6px}.critique-block>p,.critique-points p,.critique-bottom-info p{font-size:11px;font-weight:400;line-height:1.38;color:var(--muted)}.critique-tags{display:flex;flex-wrap:wrap;gap:8px 6px}.critique-tags li{padding:4px 8px;border-radius:10px;background:#f2f5f5;color:var(--muted);font-size:9px;line-height:1}.critique-points{display:flex;flex-direction:column;gap:8px}.critique-points h4{margin:0 0 2px;font-size:11px;font-weight:600;line-height:1.35}.critique-points p{line-height:1.34}.critique-points p+p{margin-top:1px}.critique-bottom-info{display:flex;flex-direction:column;gap:12px}.critique-bottom-info h3{margin-bottom:4px}.critique-bottom-info p{color:var(--ink);line-height:1.32}@media(max-width:767px){.ai-critique .critique-summary{grid-template-columns:1fr;gap:18px;margin-top:22px}.ai-critique blockquote{font-size:1.75rem;line-height:1.18}.critique-attribution{font-size:1rem;line-height:1.45}.critique-link{align-self:start;min-height:44px;display:inline-flex;align-items:center}.critique-modal{position:fixed;inset:0;width:100%;height:100dvh;max-width:none;max-height:none;margin:0;border-radius:0}.critique-sheet{min-height:100%;padding:calc(16px + env(safe-area-inset-top,0px)) 22px calc(28px + env(safe-area-inset-bottom,0px))}}
+/* AI critique section + modal. Modal constraints intentionally mirror the résumé. */
+.ai-critique .critique-summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr) auto;gap:28px;align-items:end;margin-top:18px}
+.ai-critique blockquote{margin:0;max-width:720px;font-size:1.75rem;font-weight:500;line-height:1.2}
+.critique-attribution{color:var(--muted);font-size:1rem;line-height:1.45}
+.critique-link{align-self:end;color:var(--green);font-size:.875rem;font-weight:500;white-space:nowrap}
+.critique-modal{padding:0;border:0;border-radius:16px;background:#fff;color:var(--ink);width:min(900px,calc(100% - 48px));max-width:none;max-height:calc(100dvh - 76px);margin:38px auto;overflow:auto;overscroll-behavior:contain}
+.critique-modal::backdrop{background:rgba(0,0,0,.5)}
+.critique-sheet{padding:26px 34px;display:flex;flex-direction:column;gap:18px}
+.critique-modal-header{display:flex;align-items:flex-start;gap:20px}
+.critique-modal-header h2{flex:1;font-size:29px;font-weight:600;line-height:1.35}
+.critique-close{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border:0;padding:0;background:transparent;color:var(--ink);border-radius:4px}
+.critique-close span{font-family:Arial,sans-serif;font-size:30px;font-weight:300;line-height:1}
+.critique-close:hover{background:var(--tag)}
+.critique-block{border-top:1px solid var(--line);padding-top:11px}
+.critique-block h3{font-size:.75rem;font-weight:600;line-height:1;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 7px}
+.critique-block>p,.critique-points p,.critique-bottom-info p{font-size:.875rem;font-weight:400;line-height:1.34;color:var(--muted)}
+.critique-tags{display:flex;flex-wrap:wrap;gap:6px}
+.critique-tags li{font-size:.75rem;line-height:1;padding:4px 8px;border-radius:10px;background:#f2f5f5;color:var(--muted)}
+.critique-points{display:grid;grid-template-columns:repeat(2,minmax(0,385px));column-gap:22px;row-gap:12px}
+.critique-points h4{font-size:.875rem;font-weight:600;line-height:1.35;margin:0 0 2px}
+.critique-points p{line-height:1.34}.critique-points p+p{margin-top:4px}
+.critique-bottom-info{display:grid;grid-template-columns:repeat(2,minmax(0,360px));gap:30px}
+.critique-bottom-info h3{margin-bottom:4px}.critique-bottom-info p{color:var(--ink);line-height:1.32}
+@media(max-width:767px){
+ .ai-critique .critique-summary{grid-template-columns:1fr;gap:18px;margin-top:22px}
+ .ai-critique blockquote{font-size:1.75rem;line-height:1.18}.critique-attribution{font-size:1rem;line-height:1.45}
+ .critique-link{align-self:start;min-height:44px;display:inline-flex;align-items:center}
+ .critique-modal{position:fixed;inset:0;width:100%;height:100dvh;max-height:100dvh;max-width:100%;margin:0;border-radius:0;background:var(--page)}
+ .critique-sheet{padding:0 22px calc(28px + env(safe-area-inset-bottom,0px));gap:20px}
+ .critique-modal-header{position:sticky;top:0;z-index:1;align-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) 0 15px;border-bottom:1px solid var(--line);background:var(--page)}
+ .critique-modal-header h2{font-size:17px;line-height:1.35}
+ .critique-block{padding-top:15px}
+ .critique-points{grid-template-columns:minmax(0,1fr);row-gap:14px}
+ .critique-bottom-info{grid-template-columns:minmax(0,1fr);gap:12px}
+}
