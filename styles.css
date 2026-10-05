@@ -94,3 +94,24 @@ body.resume-is-open{position:fixed;width:100%;overflow:hidden}
 .language-switch:hover{color:#16845f;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:767px){.nav-divider{width:auto;height:1px;margin:4px 16px;background:var(--line)}.language-switch{padding:14px 16px;text-align:left;align-self:stretch}}
 html[lang="zh-CN"] body{font-family:Inter,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif}
+
+
+/* AI critique: intentionally follows the existing Experience/About editorial rhythm. */
+.ai-critique .critique-summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr) auto;gap:28px;align-items:end;margin-top:18px}
+.ai-critique blockquote{margin:0;max-width:720px;font-size:1.75rem;font-weight:500;line-height:1.2}
+.critique-attribution{color:var(--muted);font-size:1rem;line-height:1.45}
+.critique-link{align-self:end;color:var(--green);font-size:.875rem;font-weight:500;white-space:nowrap}
+.critique-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.critique-header h2{margin-top:8px;font-size:1.875rem;font-weight:600;line-height:1.2}
+.critique-sheet{gap:18px}
+.critique-sheet .resume-section p{max-width:760px}
+.critique-bottom p{font-weight:500;color:var(--ink)}
+@media(max-width:767px){
+  .ai-critique .critique-summary{grid-template-columns:1fr;gap:18px;margin-top:22px}
+  .ai-critique blockquote{font-size:1.75rem;line-height:1.18}
+  .critique-attribution{font-size:1rem;line-height:1.45}
+  .critique-link{align-self:start;min-height:44px;display:inline-flex;align-items:center}
+  .critique-modal{background:var(--page)}
+  .critique-header{position:sticky;top:0;z-index:1;padding:calc(16px + env(safe-area-inset-top,0px)) 0 15px;border-bottom:1px solid var(--line);background:var(--page)}
+  .critique-header h2{font-size:1.5rem}
+}
