@@ -145,3 +145,22 @@ html[lang="zh-CN"] body{font-family:Inter,"PingFang SC","Microsoft YaHei","Noto 
 @media(max-width:767px){.icon-desktop-only{display:none}}
 
 .caption-icon{width:9px;height:9px;flex-shrink:0;background-color:currentColor;-webkit-mask:url("assets/icons/download-black.svg") center/contain no-repeat;mask:url("assets/icons/download-black.svg") center/contain no-repeat}
+
+/* Footer social assets and geometry follow Figma FooterSocial (85:360). */
+.site-footer{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:40px}
+.footer-social{display:flex;align-items:center;gap:13px}
+.social-link{position:relative;display:block;flex:0 0 25.25px;width:25.25px;height:25px;border-radius:2px}
+/* Extend the hit area without moving or resizing the original artwork. */
+.social-link::before{content:"";position:absolute;inset:-9px -4px -10px;border-radius:4px}
+.social-link:hover::before{background:rgba(32,175,127,.12)}
+.footer-links{align-items:center;min-width:202px;font-size:.75rem;line-height:1}
+.footer-links .icon-link{min-width:59px;padding-block:4px}
+.footer-links small{line-height:1.35}
+@media(max-width:767px){
+  .site-footer{grid-template-columns:minmax(0,1fr) auto;gap:12px 10px}
+  .footer-social{padding-top:3px}
+  .footer-links{grid-column:1 / -1}
+  .footer-links .icon-link{padding-block:0;color:var(--ink)}
+}
+/* Let the identity wrap at narrow widths or with enlarged text. */
+@media(max-width:359px){.identity{min-width:0}}

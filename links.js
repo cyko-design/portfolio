@@ -2,7 +2,9 @@
 window.portfolioLinks = Object.freeze({
   resume: '#resume-modal',
   portfolio: 'https://www.figma.com/deck/b6DfCZkgf1KJnCnDoCo5mG',
-  linkedin: 'https://www.linkedin.com/in/charlesyuen/',
+  linkedin: 'https://www.linkedin.com/in/charlesyuen',
+  github: 'https://github.com/cyko-design',
+  x: 'https://x.com/cykodesign',
   mindlens: 'https://mindlens-4ov.pages.dev/',
   considered: 'https://www.figma.com/deck/b6DfCZkgf1KJnCnDoCo5mG/2026-Portfolio--Charles-Yuen-?node-id=275-741&t=m6ir8wHlQDsPnbcP-1',
   waterNymphArticle: 'https://lnkd.in/p/gXBp88Ne',
